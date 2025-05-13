@@ -1,0 +1,29 @@
+﻿@model IEnumerable<OceanographyManager.Models.OceanData>
+
+@{
+    ViewData["Title"] = "My Oceanographic Data";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Location</th>
+            <th>Temperature (°C)</th>
+            <th>Salinity (PSU)</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Location</td>
+                <td>@item.Temperature</td>
+                <td>@item.Salinity</td>
+                <td>@item.CollectionDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>

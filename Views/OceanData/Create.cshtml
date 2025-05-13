@@ -1,0 +1,39 @@
+﻿@model OceanographyManager.Models.OceanData
+
+@{
+    ViewData["Title"] = "Add New Oceanographic Data";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <!-- Câmp pentru locație -->
+    <div class="mb-3">
+        <label asp-for="Location" class="form-label"></label>
+        <input asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+
+    <!-- Câmp pentru temperatură -->
+    <div class="mb-3">
+        <label asp-for="Temperature" class="form-label"></label>
+        <input asp-for="Temperature" class="form-control" />
+        <span asp-validation-for="Temperature" class="text-danger"></span>
+    </div>
+
+    <!-- Câmp pentru salinitate -->
+    <div class="mb-3">
+        <label asp-for="Salinity" class="form-label"></label>
+        <input asp-for="Salinity" class="form-control" />
+        <span asp-validation-for="Salinity" class="text-danger"></span>
+    </div>
+
+    <!-- Adaugă aici celelalte câmpuri (pH, DissolvedOxygen etc.) -->
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Save Data</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
