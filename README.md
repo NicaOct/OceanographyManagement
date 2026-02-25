@@ -1,0 +1,1 @@
+A full-stack application designed to manage oceanographic data and provide real-time insights into global maritime conditions. This tool allows researchers and enthusiasts to log environmental observations while staying updated with live ocean current data.
